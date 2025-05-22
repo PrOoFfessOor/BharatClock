@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Clock</title>
+    <style>
+        *{
+            margin: 0;
+
+        }
+        body{
+            background-color: silver;
+        }
+        #container{
+            border-radius: 10px;
+            border:2px solid black;
+            width:80vw;
+            height: 80vh;
+            background-color: black;
+            color:aqua;
+            text-align:center;
+            margin-top:50px;
+            margin-left:50px;
+        }
+        h1{
+            margin-top:20vh;
+        }
+        p{
+            margin-top:20px;
+        }
+        button{
+            margin-top:20px;
+            background-color:green;
+            color:white;
+            width:200px;
+            border-radius:10px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Bharat Clock</h1>
+        <p id="p">time and date will show here</p>
+        <button onclick="timNow()">Show time</button>
+        <button onclick="dateNow()">Show Date</button>
+    </div>
+    
+</body>
+<script>
+    let p=document.getElementById('p')
+    let time=new Date()
+    let timeNow=time.toLocaleString()
+    p.textContent=time
+    let tim=time.toLocaleTimeString()
+    let date=time.getDate()
+    function dateNow(){
+        p.textContent=date
+    }
+    function timNow(){
+        p.textContent=tim
+    }
+
+</script>
+</html>
